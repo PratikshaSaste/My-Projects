@@ -1,36 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
-    *{
-    margin: 0px;
-    padding:0;
-    box-sizing:border-box;
-    } 
-    .header{
-     width:100%;
-     height:100px;
-     background:#385898;
+    * {
+        margin: 0px;
+        padding: 0;
+        box-sizing: border-box;
     }
-    h1 {
-    color: #fff;
-    font-size: 40px;
-    font-family: sans-serif;
-    padding: 3px;
-    margin-left: 150px;
-    
-}
+
+    .page-container {
+        width: 100%;
+        height: 100vh;
+        background: #edf0f5;
+        display: flex;
+    }
+
+    .header {
+        width: 100%;
+        height: 90px;
+        background: #385898;
+    }
+
+    div.name {
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        font-family: sans-serif;
+        padding: 3px;
+        margin-left: 150px;
+        position: relative;
+        left: 0px;
+        top: 30px;
+    }
+
+    button.sign-up {
+        height: 30px;
+        width: 70px;
+        position: relative;
+        bottom: 10px;
+        background: #42b72a;
+        font-weight: bold;
+        color: #fff;
+        border: none;
+        font-size: 12px;
+    }
+
+    div.joinfb {
+        position: relative;
+        left: 1000px;
+        color: #fff;
+        font-size: 13px;
+        font-family: sans-serif;
+    }
+
+    div.joinfb:hover {
+        width: 200px;
+        height: 500px;
+    }
+
+    i.fa.fa-caret-down {
+        padding-left: 5px;
+        font-size: 15px;
+        position: relative;
+        top: 2px;
+    }
 </style>
+
 <body>
-    <div class="header">
-        <h1>facebook       
+    <div class="page-container">
+        <div class="header">
+            <div class="name">facebook
                 <button class="sign-up">Sign Up</button>
-        </h1>       
+            </div>
+            <div class="joinfb">
+                Join or log in to Facebook
+                <i class="fa fa-caret-down"></i>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
