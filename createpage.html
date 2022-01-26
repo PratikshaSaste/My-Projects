@@ -7,6 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function showHtmlDiv() {
+            var htmlShow = document.getElementById("link1");
+            if (htmlShow.style.display === "none") {
+                htmlShow.style.display = "block";
+            } else {
+                htmlShow.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <style>
     * {
@@ -52,17 +62,58 @@
         font-size: 12px;
     }
 
-    div.joinfb {
+    a.joinfb {
         position: relative;
-        left: 1000px;
+        left: 900px;
+        background: #385898;
+        border: none;
         color: #fff;
+        text-decoration: none;
         font-size: 13px;
         font-family: sans-serif;
     }
 
-    div.joinfb:hover {
+    .myForm {
+        position: fixed;
+        left: 930px;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        margin-top: 7px;
+        width: 240px;
+        height: 270px;
+    }
+
+    input.form-group {
+        padding: 5px;
+        border: 1px solid #d4def3;
+        outline: none;
+        margin-bottom: 5px;
+        margin-top: 2px;
+        margin-left: 18px;
         width: 200px;
-        height: 500px;
+    }
+    button.btn{
+        padding: 5px;
+        outline: none;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        margin-left: 18px;
+        width: 200px;
+        background: #385898;
+        color:white
+    }
+    button.btn1 {
+        height: 30px;
+        width: 70px;
+        position: relative;
+        top: 10px;
+        background: #42b72a;
+        font-weight: bold;
+        color: #fff;
+        border: none;
+        font-size: 12px;
+        left: 80px;
     }
 
     i.fa.fa-caret-down {
@@ -70,6 +121,31 @@
         font-size: 15px;
         position: relative;
         top: 2px;
+    }
+
+    a {
+        text-align: center;
+        margin-left: 116px;
+        text-decoration: none;
+        margin-bottom: 30px;
+        font-size: 12px;
+        color: #385898;
+        font-weight: 600;
+    }
+    label{
+        margin-left: 18px;
+        margin-top: 7px;
+        font-size: 15px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #606770;
+    }
+    hr{
+        margin-top: 15px;
+    }
+    p.content {
+    margin-top: 12px;
+    margin-left: 7px;
     }
 </style>
 
@@ -79,10 +155,22 @@
             <div class="name">facebook
                 <button class="sign-up">Sign Up</button>
             </div>
-            <div class="joinfb">
+            <a href="#" onclick="showHtmlDiv()" class="joinfb">
                 Join or log in to Facebook
                 <i class="fa fa-caret-down"></i>
-            </div>
+            </a>
+            <form id="link1" class="myForm">
+                 <label>Email or Phone</label>       
+               <input type="text" class="form-group">
+                <label>Password</label> 
+                <input type="password" class="form-group">
+                <p class="link"><a href="#pwd">Forgotten Account?</a></p>
+                <button class="btn">Log In</button>
+                <hr>
+                    <p class="content"><label>Do you want to join Facebook?</label>
+                    <button class="btn1">Sign Up</button>              
+            </p>
+            </form>
         </div>
     </div>
 </body>
