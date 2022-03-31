@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: white;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            /* font-size: 12px; */
+            height: 80px;
+            margin-top: 20px;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .navbar a:hover {
+            background: rgb(246, 242, 242);
+
+        }
+
+        a img {
+            margin-left: 30px;
+        }
+
+        input[type='text'] {
+            float: left;
+            padding: 11px;
+            margin-top: 8px;
+            margin-left: 80px;
+            font-size: 13px;
+            width: 300px;
+            outline: 0;
+            border: 1px solid #f5f5f6;
+            border-radius: 0 4px 4px 0;
+            border-left: 0;
+            background: #f5f5f6;
+            text-align: center;
+        }
+
+        span {
+            position: relative;
+            top: 20px;
+            right: 20px;
+            font-size: 12px;
+        }
+
+        i.fa.fa-search {
+            position: relative;
+            left: 130px;
+            top: 5px;
+        }
+
+        .main {
+            height: 500px;
+            background-color: violet;
+        }
+
+        .adcontainer {
+            height: 100px;
+            background-color: rgb(213, 238, 130);
+        }
+
+        img.image {
+            height: 100px;
+            width: 100%;
+        }
+        .offer{
+           height:200px;
+           width: 100%;
+           background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href=""><img src="myntra.png" alt="myntraicon" style="height:30px"></a>
+        <a href="#men">MEN</a>
+        <a href="#news">WOMEN</a>
+        <a href="#kids">KIDS</a>
+        <a href="#home">HOME & LIVING</a>
+        <a href="#beauty">BEAUTY</a>
+        <a href="#beauty">STUDIO</a>
+        <a href="#"><i class="fa fa-search"></i></a>
+        <div class="innercontainer">
+            <input type="text" placeholder="Search for products,brands and more">
+        </div>
+
+
+        <a href="#">
+            <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+            <span>Profile</span>
+        </a>
+        <a href="#">
+            <i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+            <span>Wishlist</span>
+        </a>
+        <a href="#">
+            <i class="fa fa-shopping-bag fa-lg" aria-hidden="true"></i>
+            <span>Bag</span>
+        </a>
+    </div>
+
+    <div class="main">
+        <div class="adcontainer">
+            <picture>
+                <img src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/29/e1db6f6b-fb9c-48e0-96ca-1604b2ada3391617013143395-free-delivery.jpg"
+                    alt="imgad" class="image">
+            </picture>
+         <div class="offer">
+             <img src="https://assets.myntassets.com/w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/18/7663490e-63f4-43b3-94a5-43fe342187e71645185357469-DK_Main-Banner_07.jpg" alt="">
+         </div>
+        </div>
+    </div>
+</body>
+
+</html>
