@@ -20,26 +20,6 @@ function Expenses(props) {
         amount={props.expenseitems[2].amount}
         date={props.expenseitems[2].date}
       />
-      <ExpenseItem
-        title={props.expenseitems[3].title}
-        amount={props.expenseitems[3].amount}
-        date={props.expenseitems[3].date}
-      />
-      <ExpenseItem
-        title={props.expenseitems[4].title}
-        amount={props.expenseitems[4].amount}
-        date={props.expenseitems[4].date}
-      />
-      <ExpenseItem
-        title={props.expenseitems[5].title}
-        amount={props.expenseitems[5].amount}
-        date={props.expenseitems[5].date}
-      />
-      <ExpenseItem
-        title={props.expenseitems[6].title}
-        amount={props.expenseitems[6].amount}
-        date={props.expenseitems[6].date}
-      />
     </Card>
   );
 }
