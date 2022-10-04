@@ -1,0 +1,91 @@
+<html>
+<body>
+    Name:<input type="text" id=txt1>
+    Year of Passing:
+    <select id=sel1>
+        <option>2015</option>
+        <option>2016</option>
+        <option>2017</option>
+        <option>2018</option>
+    </select><br>
+    Percentage:<input type="text" id=per><br>
+    City :<select id=sel2>
+        <option>Pune</option>
+        <option>Mumbai</option>
+        <option>Nashik</option>
+        <option>Nagpur</option>
+    </select><br>
+    <input type="button" value="add" id=btn1>
+    <input type="button" value="search" id=btn2>
+
+    <div id=div1>
+
+    </div>
+    <div id=div2>
+    </div>
+</body>
+<script>
+    function init(){
+
+        btn1=document.getElementById("btn1");
+        btn2=document.getElementById("btn2");
+
+        btn1.addEventListener("click",funAdd,false);
+        btn2.addEventListener("click",funSearch,false);
+
+    }
+    window.addEventListener("load",init,false);
+    arr=new Array();
+
+    function search(a,b,c,d)
+    {
+        this.sname=a;
+        this.year=b;
+        this.percentage=c;
+        this.city=d;
+    }
+
+    function display()
+    {
+         str="";
+         for(i=0;i<arr.length;i++)
+            {
+                str+="<table border=0><tr><td>"+arr[i].sname+"<td>"+arr[i].year+"<td>"+arr[i].percentage+"<td>"+arr[i].city+"</table>";
+            }
+                        div1.innerHTML=str;
+    }
+
+    function funAdd()
+    {
+        t1=document.getElementById("txt1").value;
+        sel1=document.getElementById("sel1").value;
+        per=document.getElementById("per").value;
+        sel2=document.getElementById("sel2").value;
+
+        obj=new search(t1,sel1,per,sel2);
+        arr.push(obj);
+        display();
+
+    }
+
+    function funSearch()
+    {
+        t1=document.getElementById("txt1").value;
+        sel1=document.getElementById("sel1").value;
+        per=document.getElementById("per").value;
+        sel2=document.getElementById("sel2").value;
+        //div2=document.getElementById("div2").value;
+
+        str1="";
+        for(i=0;i<arr.length;i++)
+        {
+            if(arr[i].sname==t1||arr[i].year==sel1||arr[i].percentage==per||arr[i].city==sel2)
+            {
+               // alert("hello");
+               div1.innerHTML="<table border=0><tr><td>"+arr[i].sname+"<td>"+arr[i].year+"<td>"+arr[i].percentage+"<td>"+arr[i].city+"</table>";
+            }
+        }
+         
+    }
+    </script>
+</html>

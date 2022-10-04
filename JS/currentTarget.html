@@ -1,0 +1,38 @@
+<html>
+<body>
+<ul>
+<li id=l1 >Red</li>
+<li id=l2>Green</li>
+<li id=l3>Yellow</li>
+</ul>
+
+
+<script>
+    l1=document.getElementById("l1");
+    l2=document.getElementById("l2");
+    l3=document.getElementById("l3");
+
+    l1.addEventListener("click",funClick1,false);
+    l2.addEventListener("click",funClick2,false);
+    l3.addEventListener("click",funClick3,false);
+
+function funClick1(event)
+{
+ alert(event.currentTarget.textContent);
+ document.bgColor=event.currentTarget.textContent;
+}
+
+function funClick2(event)
+{
+ alert(event.currentTarget.textContent);
+ document.bgColor=event.currentTarget.textContent;
+}
+
+function funClick3(event)
+{
+ alert(event.currentTarget.textContent);
+ document.bgColor=event.currentTarget.textContent;
+}
+</script>
+</body>
+</html>

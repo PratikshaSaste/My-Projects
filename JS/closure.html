@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <input type="button" value="click" onclick="myfun()">
+        <div id=d1></div>
+
+        <script>
+          var add=(function(){  //add is expression of ananymous function;
+          
+          var counter=0;
+          return function()
+          {
+            counter+=1;
+             return counter;
+          }
+          }
+          )();
+
+          function myfun()
+          {
+              document.getElementById("d1");
+              d1.innerHTML+=add();
+          }
+            </script>
+    </body>
+</html>

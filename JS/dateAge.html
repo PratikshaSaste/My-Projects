@@ -1,0 +1,31 @@
+<html>
+<body>
+
+</body>
+</html>
+
+<script>
+    var i,j,k,x,y,z;
+
+    var dob=new Date();
+    var current=new Date();
+    dob.setFullYear(1997);
+    dob.setMonth(5);
+    dob.setDate(20);
+
+   i=dob.getFullYear();
+   j=dob.getMonth();
+   k=dob.getDate();
+    
+    current.setFullYear(2020);
+    current.setMonth(0);
+    current.setDate(29);
+  
+    x=current.getFullYear();
+    y=current.getMonth();
+    z=current.getDate();
+
+
+   alert(x-i,"/",y-j,"/",z-k)
+
+</script>

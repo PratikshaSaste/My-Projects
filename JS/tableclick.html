@@ -1,0 +1,45 @@
+<html>
+    <body>
+        <table id="table" border=2>
+            <tr id=tr1>
+                <th>Roll NO</th>
+                <th>Name</td>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Pratiksha</td>
+                <td>73</td>
+            </tr>
+            <tr id=tr2>
+                <td>2</td>
+                <td>Sayali</td>
+                <td>70</td>
+            </tr>
+        </table>
+
+     <script>
+        table=document.getElementById("table");
+       //tr1=document.getElementById("tr1");  
+       //tr2=document.getElementById("tr2");
+
+       table.addEventListener("click",funclick,false);
+       //tr1.addEventListener("click",funclick,false);
+      // tr2.addEventListener("click",funclick,false);
+
+       function funclick(event)
+       {
+
+           //document.textContent=event.id.textContent;
+           str=event.target.parentNode.textContent;
+         alert(str);
+
+         /* obj=event.target.parentNode;
+          arr=document.getElementsByTagName("tr").document.querySelectorAll(td);
+          alert(arr[0].textContent);*/
+                }
+     </script>
+     
+     
+   </body>
+</html>

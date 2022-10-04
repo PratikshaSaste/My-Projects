@@ -1,0 +1,23 @@
+<html>
+<body >   
+<input type="button" value="click" onClick="func()">
+
+<script>
+
+ var color=new Array("red","blue","green","yellow","pink");
+ var i=0;
+function func()
+{
+   
+   document.bgColor=color[i];
+   i++; 
+   
+   if(color.length==i)
+   {
+     i=0;
+   }   
+} 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+enter no:<input type="text" id="t1"><br>
+<p><input type="button" value="click" onClick="fib()"></p>
+<p id="d1"></p>
+</body>
+
+</html>
+<script>
+
+
+function fib()
+{
+var n1=0,n2=1,n3,i;
+var x=document.getElementById("t1").value;
+for(i=0;i<x;i++)
+{
+    if(i<=1)
+        n3=i;
+    else{
+  n3=n1+n2;
+  n1=n2;
+  n2=n3;
+ }
+ var y=document.getElementById("d1");
+ y.innerHTML+=(n3+"\t");
+}
+}
+</script>  

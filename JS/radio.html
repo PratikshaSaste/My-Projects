@@ -1,0 +1,68 @@
+<html>
+<body>
+Enter Name:<input type="text" id=t1><br>
+
+City:<Select id="s1" value="submit">
+<option>Pune</option>
+<option>Mumbai</option>
+<option>Nashik</option>
+</Select>  <br>
+ Result:<input type="radio" id=r1>Yes
+<input type="radio" value="No" name="Result">NO<pre></pre>
+<input type="button" value="submit" onClick="myfunc()">
+
+<div>
+<table>
+    <tr>
+        <td id=t2></td>
+        <td id=t3><td>
+            <td id=t></td>
+        </tr>
+    <tr>
+        <td id=t4></td>
+        <td id=t5></td>
+        <td id=t0></td>
+    </tr>
+    <tr>
+        <td id=t6></td>
+        <td id=t7></td>
+    </tr>
+</table>
+</div>
+<script>
+function myfunc()
+{
+var x=document.getElementById("t1").value;
+        var y=document.getElementById("s1").value;
+       var z=document.getElementById("r1").value;  
+       var i=document.getElementById("r2").value; 
+       document.getElementById("t0").innerHTML=i; 
+
+
+        alert(x+y)
+        document.getElementById("t2").innerHTML="Name";
+        document.getElementById("t3").innerHTML="City";
+        document.getElementById("t").innerHTML="Result";
+
+        document.getElementById("t4").innerHTML=x;
+        document.getElementById("t5").innerHTML=y;
+        document.getElementById("t0").innerHTML=z;
+
+        //document.getElementById("t0").innerHTML=i;
+
+        document.getElementById("t2").style.border="thick double #000";
+        document.getElementById("t3").style.border="thick double #000";
+        document.getElementById("t4").style.border="thick double #000";
+        document.getElementById("t5").style.border="thick double #000";
+        document.getElementById("t").style.border="thick double #000";
+        document.getElementById("t0").style.border="thick double #000";
+}
+</script>    
+
+</body>
+
+
+
+
+
+</html>

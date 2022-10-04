@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <script>
+            function fun1(num)
+            {
+                if(num<=1){
+                 return 1;
+                }
+                else{
+                    result=num*fun1(num-1);
+                }
+                return result;
+            }
+            ans=fun1(9);
+            document.write(ans);
+        </script>
+        </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body onload="loadEle();">
+	<div style="border:2px solid black;width: 600px; margin-top: 100px;margin-left: 200px;" >
+		<div style="margin-left: 30px">
+	<h1>Bus Details</h1>
+	<select id="sel">
+		<option>Bus Type</option>
+	<option>Normal Bus</option>
+	<option>Semi Luxury</option>
+	<option>Luxury</option>
+	</select >
+	<p>Bus Stop</p>
+	<label>Start</label>
+	<input  type="text" id="in1">
+	<label>End</label>
+	<input type="text" id="in2">
+	<p>Bus Time</p>
+	<label>Start</label>
+	<input id="in3" type="text">
+	<label>End</label>
+	<input type="text" id="in4">
+	<br><br>
+	<label>Ticket Price</label>
+	<input type="text" id="tp">
+	<br><br>
+	<label>Available Seat</label>
+	<input type="text" id="as"><br><br>
+<div >
+	<button type="Cancel" id="can"  value="cancel" >Cancel</button>
+
+	<button type="button" id="btn"  onclick="SaveBus();" >Save</button>
+	<button type="button" id="btn" onclick="updateEle();" >Update</button>
+	<button type="button" id="btn"  onclick="NewEle();" >New</button>
+	<button type="button" id="btn"  onclick="deleteEle();" >Delete</button>
+	
+</div>
+	</div>
+</div>
+<div>
+	<ul id="list">
+		
+	</ul>
+	<ul id="seatDetails"></ul>
+
+</div>
+
+
+
+
+
+<script>
+	var busdetails;
+	var txtBtype,txtStopStrt,txtStopStop,txtTimeStrt,txtTimeStop,txtPrice,txtSeat;
+	function busdetail(bType,bStopStrt,bStopStop,bTimeStrt,bTimeStop,tPrice,AvSeat){
+
+		this.bType=bType;
+		this.bStopStrt=bStopStrt;
+		this.bStopStop=bStopStop;
+		this.bTimeStrt=bTimeStrt;
+		this.bTimeStop=bTimeStop;
+		this.tPrice=tPrice;
+		this.AvSeat=AvSeat;
+
+	}
+
+	function loadEle(){
+		txtBtype=document.getElementById("sel");
+		txtStopStrt=document.getElementById("in1");
+		txtStopStop=document.getElementById("in2");
+		txtTimeStrt=document.getElementById("in3");
+		txtTimeStop=document.getElementById("in4");
+		txtPrice=document.getElementById("tp");
+		txtSeat=document.getElementById("as");
+		txtList=document.getElementById("list");
+
+		loadItems();
+	}
+
+busdetails=[
+new busdetail("Normal","pune","satara",2.20,4.30,260,2),
+new busdetail("Luxury","warje","nalStop",1,4.30,25,1)];
+
+
+	function loadItems(){
+		var str="";
+for(let i=0;i<busdetails.length;i++){
+	str+="<li>"+busdetails[i].bType+" "+busdetails[i].bStopStrt+" "+busdetails[i].bStopStop+" "+busdetails[i].bTimeStrt+" "+busdetails[i].bTimeStop+" "+busdetails[i].tPrice+" "+busdetails[i].AvSeat+"</li>";
+}
+txtList.innerHTML=str;
+
+	}
+
+	function SaveBus(){
+				busdetails.push(new busdetail(txtBtype.value, txtStopStrt.value,
+										txtStopStop.value, txtTimeStrt.value,txtTimeStop.value,txtPrice.value,txtSeat.value));
+				loadEle();
+			}
+
+
+	function updateEle(){
+		for(let i=0;i<busdetails.length;i++){
+			if(busdetails[i].bStopStrt==txtStopStrt.value){
+				busdetails[i].bStopStop=txtStopStop.value;
+				busdetails[i].bTimeStrt=txtStopStrt.value;
+				busdetails[i].bTimeStop=txtTimeStop.value;
+				busdetails[i].bPrice=txtPrice.value;
+				busdetails[i].AvSeat=txtSeat.value;
+				break;
+
+			}
+			
+		}
+		loadEle();
+	}
+
+	function NewEle(){
+		txtStopStrt.value="";
+		txtStopStop.value="";
+		txtTimeStrt.value="";
+		txtTimeStop.value="";
+		txtPrice.value="";
+		txtSeat.value="";
+		txtStopStrt.focus();
+	}
+
+
+	function deleteEle(){
+	for(let i=0;i<busdetails.length;i++){
+		if(busdetails[i].bStopStrt==txtStopStrt.value){
+
+		busdetails.splice(i,1);
+		break;
+	}
+
+	}
+	loadEle();
+	}	
+	
+
+	function upseat(){
+		var tseat=40;
+		txtSeat=document.getElementById("as");
+		var availseat=tseat-txtSeat;
+		var targetN=document.getElementById("seatDetails");
+		var tNode=document.createTextNode(availseat);
+		var li11=document.createElement("li");
+		li11.appendChild(tNode);
+		targetN.appendChild(li11);
+
+
+	}
+
+</script>
+</body>
+</html>

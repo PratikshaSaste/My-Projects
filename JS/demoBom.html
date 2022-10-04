@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <input type="button" value="display" onclick="winOpen()">
+        <input type="button" value="close" onclick="winClose()">
+        </body>
+        <script>
+            function winOpen(){
+                myWin=open("","","width=300,height=300",false);
+                myWin.document.write("hello");
+
+                myWin.document.bgColor="orange";
+            }
+
+            function winClose()
+            {
+                myWin.close();
+            }
+
+
+        </script>
+    </html>

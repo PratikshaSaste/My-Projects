@@ -1,0 +1,44 @@
+<html>
+<body>
+
+    <style>
+      div{
+       height: 300px;
+       width: 300px;
+       border:2px solid black;
+
+      }
+        </style>
+<div id="d1">This is my div..!</div>
+<br>
+<b>select background Color and Font color</b><br>
+
+
+<select id="s1">
+<option>red</option>
+<option>yellow</option>
+<option>Green</option>
+
+</select>
+
+<select id="s2">
+    <option>red</option>
+    <option>yellow</option>
+    <option>Green</option>
+    
+    </select><br><br>
+<input type="button" value="submit" onClick="func()"><br>
+<script>
+  function func()
+  {
+    var x=document.getElementById("s1").value;
+    var y=document.getElementById("s2").value;
+    alert("see the magic")
+    d1.style.backgroundColor=x;
+    d1.style.color=y;
+
+  }
+
+    </script>
+</body>
+</html>

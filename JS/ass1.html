@@ -1,0 +1,51 @@
+<html>
+  <body>
+    Name:<input type="text" id="t1"><br><pre></pre>
+    City:<select id="s1"value="submit">
+        <option>Pune</option>
+        <option>Mumbai</option>
+        
+    </select >
+       <br> <input type="button" value="submit" onClick="myfunc()"><pre></pre>
+       <br>
+     <div id="d1">
+       <table id="tb" >
+         <tr>
+           <td id="t2"></td>
+           <td id="t3"></td>
+        </tr>
+
+        <tr>
+          <td id="t4"></td>
+          <td id="t5"></td>
+       </tr>
+       </table>
+       </div>
+
+    
+  </body>
+    <script>
+        function myfunc()
+        {
+
+        var x=document.getElementById("t1").value;
+        var y=document.getElementById("s1").value;
+       // var z=document.getElementById("tb").value;  
+
+        alert(x+y)
+        document.getElementById("t2").innerHTML="Name";
+        document.getElementById("t3").innerHTML="City";
+
+        document.getElementById("t4").innerHTML=x;
+        document.getElementById("t5").innerHTML=y;
+
+        document.getElementById("t2").style.border="thick double #000";
+        document.getElementById("t3").style.border="thick double #000";
+        document.getElementById("t4").style.border="thick double #000";
+        document.getElementById("t5").style.border="thick double #000";
+
+
+
+       }
+     </script>  
+<html>

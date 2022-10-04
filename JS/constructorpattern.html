@@ -1,0 +1,19 @@
+<html>
+<body>
+<script>
+function Person(name,age,job){
+this.name=name;
+this.job=job;
+this.age=age;
+this.sayName=function(){
+    alert(this.name);
+};
+}
+var person1=new Person("Bitcode",5,"software Engineer");
+person1.sayName();
+var person2= new Person("Bitcode",9,"software Engineer");
+person2.sayName();
+alert(person1.constructor===Person)
+</script>
+</body>
+</html>

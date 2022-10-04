@@ -1,0 +1,63 @@
+<html>
+    <body>
+        Name of task:<input type="text" id=txt1>
+        Subject:<input type="text" id=txt2>
+        <input type="button" value="Add" id=btn1 >
+        <select id="s1" onchange="funDisplay()">
+
+        </select>
+        <table border="2" id=list1>
+        </table>
+        <script>
+            function init()
+            {
+                btn1=document.getElementById("btn1");
+                txt1=document.getElementById("txt1");
+                txt2=document.getElementById("txt2");
+
+                btn1.addEventListener("click",funAdd,false); 
+            }
+            window.addEventListener("load",init,false);
+            arr=new Array();
+
+            function task(a,b,d)
+            {
+              this.task=a;
+              this.sub=b;
+              this.date=d;
+            }
+
+            function funAdd()
+            {
+                var date=new Date();
+                var d=date.toLocaleDateString();
+                txt1=document.getElementById("txt1").value;
+                txt2=document.getElementById("txt2").value;
+                obj=new task(txt1,txt2,d);
+                arr.push(obj);
+                display();
+
+            }
+             var date=new Date();
+             var d=date.toLocaleDateString();
+            function display()
+            {
+                str="";
+                str1="";
+                for(i=0;i<arr.length;i++)
+                {
+                str+="<tr><th>"+"Name:"+"<td>"+arr[i].task+"<tr><th>"+" subject:"+"<td>"+arr[i].sub+"<tr><th>"+"Assign Date"+"<td>"+arr[i].date;
+                str1+="<option>"+arr[i].sub;
+                }
+                list1.innerHTML=str;
+                s1.innerHTML=str1;
+            }
+
+           /* function funDisplay()
+            {
+                str3="";
+                for(i=0;arr.length;i++)
+            }*/
+            </script>
+    </body>
+</html>

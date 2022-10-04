@@ -1,0 +1,41 @@
+<html>
+    <body>
+       
+      <img  id="img1" height="200px" width="200px">
+     <input type="button" value="first" onClick="first()">
+     <input type="button" value="last" onClick="last()">
+     <input type="button" value="prev" onClick="prev()">
+     <input type="button" value="next" onClick="next()">
+
+     <script>
+         var img1=document.getElementById("img1");
+          arrImg=new Array("logo.jpg","stock.jpg","maxresdefault.jpg","TCS.jpg");
+        var i=0;
+       function first()
+       {
+          img1.src=arrImg[0];
+
+       }
+
+       function last()
+       {
+           img1.src=arrImg[arrImg.length-1] 
+       
+       }
+
+       function prev()
+       {
+         img1.src=arrImg[i];
+         i--;
+         
+       }
+       function next()
+       {
+         i++;
+         img1.src=arrImg[i];
+       }
+
+         </script>
+
+    </body>
+</html>

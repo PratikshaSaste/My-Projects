@@ -1,0 +1,33 @@
+<html>
+<body>
+    <script>
+    var book={
+     _year:2004,
+     edition:1
+
+
+    };
+    Object.defineProperty(book,"year",{
+     get:function()
+     {
+       return this._year;
+     },
+     set:function(newValue){
+     if(newValue>2004){
+      this._year=newValue;
+      this.edition+=newValue-2004;
+     }
+     }
+    });
+    book.year=2005;
+    alert(book.edition);
+
+    var descriptor=Object.getOwnPropertyDescriptor(book,"_year");
+    alert(descriptor.value);
+    alert(descriptor.configurable);
+    alert(typeof descriptor.get);
+   
+    </script>
+</body>
+
+</html>

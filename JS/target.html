@@ -1,0 +1,21 @@
+<html>
+    <body>
+<ul id="list1">
+    <li>Red</li>
+     <li>Blue</li>
+     <li>Green</li>
+</ul>
+<script>
+list1=document.getElementById("list1");
+list1.addEventListener("click",funClick,false);
+
+function funClick(event)
+{
+ alert(event.target.textContent);
+ document.bgColor=event.target.textContent;
+
+}
+
+</script>
+</body>
+    </html>

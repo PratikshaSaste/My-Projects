@@ -1,0 +1,65 @@
+<html>
+    <body>
+        <div id=div1>
+       Name: <input type="text" id=t1><br>
+       Last name<input type="text" id=t2><br>
+       City:<select id=s1>
+           <option>Pune</option>
+           <option>Mumbai</option>
+           <option>Nashik</option>
+        </select><br>
+
+        Result:<input type="radio" name="Pass" value="Pass">Pass
+              <input type="radio" name="Fail" value="Fail">Fail<br><br>
+
+        Subject:<br><input type="checkbox" value="HTML">HTML5<br>
+                <input type="checkbox" value="CSS">CSS<br>
+                <input type="checkbox" value="PHP">PHP<br>
+                <input type="checkbox" value="Angular">Angular<br>
+
+        <input type="button" value="display" onclick="funclick()">
+        </div>
+
+        <div id=d1>
+
+        </div>
+
+        <script>
+
+       function funclick()
+       {
+        t1=document.getElementById("t1").value;
+        t2=document.getElementById("t2").value;
+        city=document.getElementById("s1").value;
+
+        arr=document.querySelectorAll("input[type='radio']");
+        for(i=0;i<arr.length;i++)
+        {
+            if(arr[i].checked==true)
+            {
+                var res=arr[i].value;
+            }
+        }
+        var select=new Array();
+        var d2=document.getElementById("div1");
+      var check1=document.querySelectorAll("input[type='checkbox']");
+
+      for(j=0;j<check1.length;j++)
+      {
+           if(check1[j].checked)
+           {
+               select.push(check1[j].value);
+           }
+      }
+           if(select.length>0)
+           {
+               c=select.join(",");
+           }
+           d1.innerHTML+="<table border=2><tr><th>"+"Name:"+t1+""+t2+"</tr></th>"+"<tr><th>"+"City:"+city+"</tr></th>"+"<tr><th>"+"Result:"+res+"</tr></th>"+"<tr><th>"+"Subjects:"+c+"</tr></th>"+"</table>";
+       
+    }
+       
+        </script>
+      
+    </body>
+</html>

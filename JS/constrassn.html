@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <script>
+            function init(){
+    
+            list=document.getElementById("list");
+            btn1=document.getElementById("btn1");
+            btn2=document.getElementById("btn2");
+
+            list.addEventListener("click",funClick,false);
+            btn1.addEventListener("click",funAdd,false);
+            btn2.addEventListener("click",btnDisplay,false);
+
+
+            }
+            window.addEventListener("load",init,false);
+            arr=new Array();
+
+            function Marks(a,b,c)
+            {
+                 this.name=a;
+                 this.marks=b;
+                 this.city=c;
+            }
+
+          function funAdd()
+          {
+          txt1=document.getElementById("txt1").value;
+          txt2=document.getElementById("txt2").value;
+          s1=document.getElementById("s1").value
+          obj=new Marks(txt1,txt2,s1);
+          arr.push(obj);
+          display();
+
+         }
+
+         function display()
+         {
+             str="";
+             for(i=0;i<arr.length;i++){
+              str+="<li>"+arr[i].name+"*"+arr[i].marks+"*"+arr[i].city+"</li>"
+
+             }
+             list.innerHTML=str;
+         }
+
+         function funClick(){
+            str1=event.target.textContent;
+            strArr=str1.split("*");
+
+               document.getElementById("txt1").value=strArr[0];
+              document.getElementById("txt2").value=strArr[1];
+              document.getElementById("s1").value=strArr[2];
+
+         }
+
+         function btnDisplay()
+         {
+           txt2=document.getElementById("txt2").value;
+           str1="";
+           for(i=0;i<arr.length;i++){
+           per[i]=(arr[i].marks*300)/100;
+           str1+="<li>"+arr[i].name+"*"+arr[i].marks+"*"+arr[i].city+"*"+per[i]+"</li>";
+
+           }
+             list.innerHTML=str1;
+          /* display();
+           d1.innerHTML+=per;*/
+
+         }
+        </script>
+    </head>
+
+    <body>
+         Name: <input type="text" id=txt1><br><p>
+         Marks:<input type="text" id=txt2><br></p>
+
+         City:<select id=s1>
+             <option>Pune</option>
+             <option>Mumbai</option>
+            <option>Nashik</option>
+         </select>
+
+         <input type="button" value="Add" id=btn1>
+         <input type="button" value="Display" id=btn2>
+        
+
+         <ul id=list>
+         </ul>
+         <table id=tab></table>    
+    </body>      
+</html>

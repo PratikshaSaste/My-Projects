@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <input type="button" value="start" onclick="toggle()">
+        <input type="button" value="stop" onclick="stop()">
+        </body>
+
+        <script>
+            i=0
+            function toggle()
+            {
+            sI=window.setInterval("start()",400);//400 is time in milliseconds
+            }
+
+            function start()
+            {
+                var colors=["red","pink","blue","yellow","orange"];
+                document.bgColor=colors[i];
+                i++;
+                if(colors.length==i)
+                {
+                    i=0;
+                }
+            }
+            function stop()
+            {
+                window.clearInterval(sI);
+            }
+        </script>
+</html>

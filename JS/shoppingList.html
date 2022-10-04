@@ -1,0 +1,101 @@
+<html>
+<head>
+<h2>Shopping List..</h2>
+<script>
+function Init()
+{
+list1=document.getElementById("list1");
+btn1=document.getElementById("btn1");
+
+btn1.addEventListener("click",funAdd,false);
+list1.addEventListener("click",funClick,false);
+u1.addEventListener("click",funUpdate,false);
+d1.addEventListener("click",funDelete,false);
+}
+
+window.addEventListener("load",Init,false);
+arr=new Array();
+
+function shoppingList(a,b)
+{
+  this.pname=a;
+  this.pprice=b;
+}
+
+function funAdd()
+{
+  txtname=document.getElementById("txtname").value;
+  price=document.getElementById("price").value;
+  obj=new shoppingList(txtname,price);
+  arr.push(obj);
+ 
+  document.getElementById("txtname").value=" ";
+  document.getElementById("price").value=" ";
+  display();
+}
+
+function funClick(event)
+{
+    str1=event.target.textContent;
+    strArr=str1.split("*");
+
+    document.getElementById("txtname").value=strArr[0];
+    document.getElementById("price").value=strArr[1];
+}
+
+function funUpdate()
+{
+    txtname=document.getElementById("txtname").value;
+    price=document.getElementById("price").value;
+
+    for(i=0;i<arr.length;i++)
+    {
+        if(arr[i].pname==txtname){
+            arr[i].pprice=price;
+        }
+    }
+    display();
+}
+
+function funDelete()
+{
+    txtname=document.getElementById("txtname").value;
+    price=document.getElementById("price").value;
+
+    for(i=0;i<arr.length;i++)
+    {
+      if(arr[i].pname==txtname)
+      {
+        arr.splice(i,1);
+        break;
+      }
+    }
+display();
+}
+
+function display()
+{
+ str="";
+for(i=0;i<arr.length;i++){
+    str+="<li>"+arr[i].pname+"*"+arr[i].pprice+"</li>";
+}
+list1.innerHTML=str;
+}
+
+</script>
+</head>
+<body bgcolor="pink">  
+<form style="background-color:coral ;font-family:Verdana, Geneva, Tahoma, sans-serif; color:white;border:2px solid purple" align="center">
+
+Product Name:<input type="text" id="txtname"><br><p>
+Product Price:<input type="text"id="price"><br></p>
+
+<input type="button" value="Add" id=btn1>
+<input type="button" value="Update" id="u1">
+<input type="button" value="Delete" id="d1">
+</form>
+
+<ul id="list1" style="color:blue">
+</ul>
+</body>
+</html>

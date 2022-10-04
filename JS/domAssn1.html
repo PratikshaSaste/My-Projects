@@ -1,0 +1,46 @@
+<html>
+<bOdy>
+  <style>
+   #table1 {
+     background-color: coral;
+     color: darkblue;
+    }
+
+  input
+   {
+     background-color: darkorchid;
+    }
+  </style>
+<table border=2 contenteditable="true" id=table1>
+    <tr>
+        <td>name</td>
+        <td>Roll no</td>
+        <td>marks</td>
+    </tr>
+
+  <tr>
+     <td>Pratiksha</td>
+     <td>20</td>
+     <td>67</td>
+  </tr>
+
+</table><br>
+<input type="button" value="display" onclick="funtable()">
+  <script>
+      function funtable()
+      {
+        var tr1=document.createElement("tr");
+        var td1=document.createElement("td");
+        tr1.appendChild(td1);
+        table1.appendChild(tr1);
+
+        var td2=document.createElement("td");
+        tr1.appendChild(td2);
+        
+        var td3=document.createElement("td");
+        tr1.appendChild(td3);   
+
+      }
+  </script>   
+</bOdy>
+</html>

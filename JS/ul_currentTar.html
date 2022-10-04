@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <ul id=list1>
+        <li id=l1 >Red</li>
+        <li id=l2>Green</li>
+        <li id=l3>Yellow</li>
+        </ul>
+        
+        
+        <script>
+            list1=document.getElementById("list1");
+            list1.addEventListener("click",fun1,false);
+
+
+            function fun1(event)
+            {
+                txtid=event.target.id;
+                switch(txtid)
+                {
+                  case "l1":alert("clicked..")
+                            break;
+
+                  case "l2":document.bgColor=event.target.textContent;
+                            break;
+
+                  case "l3":document.bgColor=event.target.textContent;
+                            break;
+                                           
+                  default:"wrong choice";
+                }
+            }
+
+        </script>
+        </body>
+</html>

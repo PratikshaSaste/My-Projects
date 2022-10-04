@@ -1,0 +1,32 @@
+<html>
+<body>
+    <style>
+    div{
+    border:4px solid red;
+    height: 200px;
+    width:200px;
+    }
+    
+    </style>
+<div id="d1" >
+</div>
+
+<input type="button" value="click" onClick="func()">
+</body>
+</html>
+<script>
+    var img =new Array("logo.jpg","maxresdefault.jpg","stock.jpg");
+    var i=0;
+    function func()
+    {
+    
+      d1.style.backgroundImage="url("+img[i]+")";
+      i++;
+
+      if(img.length==i)
+      {
+          i=0;
+
+      }
+    }
+ </script>   

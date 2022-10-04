@@ -1,0 +1,26 @@
+<html>
+<body>
+Enter your fav Color
+ <select id="s1" onchange="color()">
+<option value="red">red</option>
+<option value="blue">blue</option>
+<option value="pink">pink</option>
+<option value="yellow">yellow</option>
+</select>
+</body>
+<script>
+
+function color()
+{
+
+    document.bgColor="red";
+    var x=document.getElementById("s1").value;
+    document.bgColor=x;
+
+}
+
+</script>
+   
+
+
+</html>

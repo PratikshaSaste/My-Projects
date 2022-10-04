@@ -1,0 +1,106 @@
+<html>
+<body>
+<table border="2" cellpadding="6" cellspacing="4" >
+
+<tr >
+<th>SR.NO</th>
+
+<th>Input</th>
+<th>Price</th>
+<th colspan="3">Quantity</th>
+<th>Total</th>
+</tr>
+
+<tr>
+
+<td>1.</td>
+<td>T-shirt</td>
+<td id="price">299</td>
+<td id="count">0</td>
+<td id="plus">+</td>
+<td id="minus">-</td>
+<td id="total"></td>
+
+</tr>
+
+<tr>
+<td>2.</td>
+<td>Shirt</td>
+<td>499</td>
+<td id="count">0</td>
+<td id="plus">+</td>
+<td id="minus">-</td>
+<td></td>
+</tr>
+
+<tr>
+<td>3.</td>
+<td>Jeans</td>
+<td>899</td>
+<td id="count">0</td>
+<td id="plus">+</td>
+<td id="minus">-</td>
+<td></td>
+</tr>
+
+<tr>
+    <th colspan="7">Total:</th>
+</tr>
+</table>
+
+<script>
+    price=document.getElementById("price");
+    document.getElementById("plus").addEventListener("click",function(event){
+        txtcount=document.getElementById("count").innerHTML;
+    var i=txtcount++;
+    var txtcount= i + 1;
+    document.getElementById("count").innerHTML=txtcount;
+
+    //Total
+    total=document.getElementById("total").innerHTML;
+    total=price*txtcount;
+    document.getElementById("total").innerHTML=total;
+    })
+     /* price=document.getElementById("price").innerHTML;
+      total=document.getElementById("total");
+      plus=document.getElementById("plus");
+      minus=document.getElementById("minus");
+
+function Init()
+{
+    plus.addEventListener("click",funAdd,false);
+    minus.addEventListener("click",funSub,false);
+
+}
+window.addEventListener("load",Init,false);
+
+function funAdd(){
+    //To increase qty by 1
+    txtcount=document.getElementById("count").innerHTML;
+    var i=txtcount++;
+    var txtcount= i + 1;
+    document.getElementById("count").innerHTML=txtcount;
+
+    //Total
+    total=document.getElementById("total").innerHTML;
+    total=price*txtcount;
+    document.getElementById("total").innerHTML=total;
+}
+
+function funSub(){
+    txtcount=document.getElementById("count").innerHTML;
+    var i=txtcount--;
+    var txtcount= i - 1;
+    document.getElementById("count").innerHTML=txtcount;
+
+    total=document.getElementById("total").innerHTML;
+    total=price*txtcount;
+    document.getElementById("total").innerHTML=total;
+
+}*/
+
+</script>
+
+</body>
+
+</html>

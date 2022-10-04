@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <a href="www.google.com" id="link1">Link</a>
+        <script>
+        link1=document.getElementById("link1");
+        link1.addEventListener("click",fun1,false);
+
+        function fun1(event)
+        {
+
+            alert(event.defaultPrevented);
+            event.preventDefault();
+            alert("its Prevented");
+            alert(event.defaultPrevented);
+            
+        }
+        </script>
+    </body>
+</html>

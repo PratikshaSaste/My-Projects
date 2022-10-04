@@ -1,0 +1,31 @@
+ 
+        <script>
+        (function(){
+          var name="";
+          Person=function(value){
+              name=value;
+              alert("inside function");
+          }
+           Person.prototype.getName=function(){
+               return name;
+           };
+           Person.prototype.setName=function(value)
+           {
+               name=value
+           };
+        }
+        )();
+
+        var person1=new Person("Nicolas");
+        alert(person1.getName());
+
+        person1.setName("Greg");
+        alert(person1.getName());
+
+        var person2=new Person("Michael");
+        alert(person1.getName());
+        alert(person2.getName());
+
+        </script>
+     </body>
+   </html>

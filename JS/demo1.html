@@ -1,0 +1,54 @@
+<html>
+<head>
+	<style>
+	img{
+	width:100px;
+	height:100px;
+	border:2px solid red;
+}
+</style>
+	<script src="Util.js"></script>
+	</head>
+<body >
+	<input type="button" id="btn1" value="attach Event">
+		<br>
+		<input type="button" id="btn2" value="detach Event">
+		<a href="www.google.com" id="a1">Link1</a>
+		<br>
+	<script>
+		btn1=document.getElementById("btn1");
+		btn2=document.getElementById("btn2");
+		a1=document.getElementById("a1");
+
+		EventUtil.addHandler(btn1,"click",fun1);
+		EventUtil.addHandler(btn2,"click",fun2);
+
+		EventUtil.addHandler(a1,"click",funPrevent);
+
+		function fun1(){
+			alert("clicked");
+		}
+		function fun2(){
+			EventUtil.removeHandler(btn1,"click",fun1);
+			alert("removed!!");
+		}
+		function funPrevent(event){
+			e1=EventUtil.getEvent(event);
+			e1.preventDefault();
+			alert("prevented");
+		}
+
+
+
+
+	</script>
+	</body>
+	</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+{
+    "name":["Album 1",
+            "Album 2",
+            "Album 3",
+            "Album 4",
+            "T-shirt",
+            "Cofee-cup"
+    ],
+    "image":[
+        "91.jpg",
+        "Album 2  ",
+        "Album 3.png",
+        "Album 4.png",
+        "rB.jpg",
+        "Cofee.png"
+        
+        
+    ],
+    "price":["$12.99",
+        "$14.99",
+        "$9.99",
+        "$19.99",
+        "$19.99",
+        "$6.99"
+
+    ]
+   
+
+}
+  

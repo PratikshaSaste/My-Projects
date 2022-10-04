@@ -1,0 +1,27 @@
+<html>
+    <body>
+      <input type="button" value="Event" id=btn1>
+      <script>
+          btn1=document.getElementById("btn1");
+          btn1.addEventListener("click",funClick,false);
+          btn1.addEventListener("mouseover",funClick,false);
+          btn1.addEventListener("mouseout",funClick,false);
+
+          function funClick(event)
+          {
+             strEvent=event.type;
+             if(strEvent=="click")
+             {
+                 alert("clicked..")
+             }
+             else if(strEvent=="mouseover"){
+                 btn1.style.backgroundColor="orange";
+             }
+             else if(strEvent=="mouseout"){
+                 btn1.style.backgroundColor="blue";
+             }
+
+          }
+      </script>
+    </body>
+</html>

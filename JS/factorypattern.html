@@ -1,0 +1,23 @@
+<html>
+<body>
+
+<script>
+function createPerson(name,age,job){
+var o=new Object();
+o.name=name;
+o.age=age;
+o.job=job;
+o.sayName=function(){
+    alert(this.name);
+};
+return o;
+    
+}
+var person1=createPerson("Bitcode",5,"software Engineer");
+var person2=createPerson("aavid",7,"Doctor");
+alert(person1.constructor===createPerson)
+//person1.createPerson();
+
+</script>
+</body>
+</html>

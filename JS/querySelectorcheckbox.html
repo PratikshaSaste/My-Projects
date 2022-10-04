@@ -1,0 +1,25 @@
+<html>
+<body>
+<input type="checkbox" value="Yes">checkbox1
+<input type="checkbox" value="No">checkbox2
+<input type="checkbox" value="Both">checkbox3
+<input type="button" value="display" onclick="fun1()">
+
+<script>
+    function fun1()
+    {
+       var arr= document.querySelectorAll("input[type='checkbox']");
+      
+       for(i= 0; i< arr.length; i++)
+       {
+           if(arr[i].checked)
+           {
+           //x=arr[i].value;
+           alert(arr[i].value); 
+           }
+       }    
+       //document.body.textContent=x;     
+    }
+</script>
+</body>
+</html>

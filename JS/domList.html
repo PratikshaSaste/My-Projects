@@ -1,0 +1,38 @@
+<html>
+<body>
+    <script>
+        var listUl=document.createElement("ul");
+        var listLi=document.createElement("li");
+        var listTxt=document.createTextNode("Android");
+        listLi.appendChild(listTxt);
+        listUl.appendChild(listLi);
+        document.body.appendChild(listUl);
+
+         var newLi1=document.createElement("li"); 
+         var li1=document.createTextNode("web");
+         newLi1.appendChild(li1);
+         listUl.appendChild(newLi1);
+
+        var listUl1=document.createElement("ul");
+        var newLi2=document.createElement("li")
+        var li2=document.createTextNode("Angular");
+        newLi2.appendChild(li2);
+        listUl.appendChild(listUl1);
+        listUl1.appendChild(newLi2);
+
+        var newLi3=document.createElement("li");
+        var li3=document.createTextNode("node");
+        newLi3.appendChild(li3);
+        listUl.appendChild(listUl1);
+        listUl1.appendChild(newLi3);
+
+        var listUl2=document.createElement("ul");
+        var listLi2=document.createElement("li");
+        var listTxt2=document.createTextNode("ios");
+        listLi2.appendChild(listTxt2);
+        listUl2.appendChild(listLi2);
+        document.body.appendChild(listUl2);
+
+        </script>
+</body>
+</html>

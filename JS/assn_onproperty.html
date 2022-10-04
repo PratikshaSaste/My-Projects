@@ -1,0 +1,49 @@
+<html>
+<body>
+<style>
+  #d1{
+      height: 200px;
+      width:200px;
+      float:left;
+      background-color: red;
+      border:2px solid black;
+    }
+    #d2{
+      height: 200px;
+      width:200px;
+      float:left;
+      
+      background-color:green;
+      border:2px solid black;
+    }
+    
+    </style>
+<div id=d1>Red</div>
+<div align="left" id=d2 >green</div>
+<script>
+   d1=document.getElementById("d1");
+   d2=document.getElementById("d2");
+
+   d1.addEventListener("mouseover",fun1,false);
+   d2.addEventListener("mouseover",fun1,false);
+
+   d1.addEventListener("mouseout",fun1,false);
+   d2.addEventListener("mouseout",fun1,false);
+
+
+
+   function fun1(event)
+   {
+       str=event.type;
+       if(str=="mouseover"){
+           document.bgColor=event.currentTarget.textContent;
+       }
+       else if(str=="mouseout"){
+           document.bgColor="transparent";
+       }
+   }
+
+    </script>
+
+</body>
+</html>

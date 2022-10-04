@@ -1,0 +1,82 @@
+<html>
+<head>
+<script>
+
+function init(){
+    list1=document.getElementById("list1");
+    tab1=document.getElementById("tab1");
+    btn1=document.getElementById("btn1");
+    btn2=document.getElementById("btn2");
+
+    list1.addEventListener("click",funClick,false);
+    btn1.addEventListener("click",funAdd,false);
+    btn2.addEventListener("click",btnDisplay,false);
+
+}
+
+window.addEventListener("load",init,false);
+arr=new Array();
+
+function student(a,b)
+{
+    this.name=a;
+    this.marks=b;
+}
+function funAdd()
+{
+  studname=document.getElementById("studname").value;
+   studmarks=document.getElementById("studmarks").value;
+
+   obj=new student(studname,studmarks);
+   arr.push(obj);
+   funDisplay();
+}
+
+function funClick()
+{
+    str1=event.target.textContent;
+    strArr=str1.split("*");
+
+    document.getElementById("studname").value=strArr[0];
+    document.getElementById("studmarks").value=strArr[1];
+}
+
+function funDisplay()
+{
+    str="";
+    for(i=0;i<arr.length;i++){
+    str+="<li>"+arr[i].name+"*"+arr[i].marks+"</li>";
+}
+list1.innerHTML=str;
+}
+
+function btnDisplay()
+{
+  txtmarks= document.getElementById("studmarks").value;
+  str2="";
+  for(i=0;i<arr.length;i++)
+{
+    if(arr[i].marks==txtmarks){
+        str2+="<tr><td>"+arr[i].name+"</td><td>"+arr[i].marks+"</td></tr>";
+    }
+}
+tab1.style.border="solid black";
+tab1.innerHTML=str2;
+}
+
+
+</script>
+</head>
+<body>
+Student Name:  <input type="text" id="studname">
+Student Marks: <input type="text" id="studmarks">
+<input type="button" value="Add" id=btn1>
+<input type="button" value="display" id=btn2>
+
+<ul id=list1>
+</ul>
+
+<table id="tab1" border="2">   
+</table> 
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style>
+     .big{
+       width:100px;
+       height:100px;
+       border:2px solid red;
+     }
+</style>
+    </head>
+<body>
+<p id=p1>This is p1</p>
+<p id=p2>This is p2</p>
+<p id=p3>This is p3</p>
+
+<div id=d1>
+ <p id=p4>This is p4</p>
+ <p id=p5>This is p5</p>
+
+</div>
+<input type="button" value="display" onclick="fun1()">
+
+<script>
+ function fun1(){
+
+     var newBtn=document.createElement("input");
+     newBtn.setAttribute("type","button");
+     newBtn.setAttribute("value","new btn");
+
+     document.body.appendChild(newBtn);
+
+     var newDiv=document.createElement("div");
+     var divtext=document.createTextNode("This is new div");
+
+     newDiv.appendChild(divtext);
+
+     newDiv.setAttribute("class","big");
+     document.body.appendChild(newDiv);
+
+     var x=document.body.firstElementChild.getAttribute("id");
+     alert(x);
+
+     
+     document.body.firstElementChild.removeAttribute("id");
+ }
+
+    </script>
+</body>
+
+</html>

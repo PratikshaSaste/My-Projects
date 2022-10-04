@@ -1,0 +1,26 @@
+<html>
+<body>
+<script>
+for(var i=0;i<navigator.plugins.length;i++)
+{
+    document.write("<br>Plugins:"+navigator.plugins[i].name+"<br>");
+}
+//screen Objects
+document.write("<br>avail width:"+screen.availWidth);
+document.write("<br>width:"+screen.width);
+document.write("<br>colordepth:"+screen.colorDepth);
+
+//navigation Objects
+document.write("<br>"+navigator.userAgent);
+document.write("<br>"+navigator.userLanguage);
+
+document.write("<br>"+navigator.onLine);
+document.write("<br>"+navigator.language);
+
+document.write("<br>App name:"+navigator.appName);
+document.write("<br>App version:"+navigator.appVersion);
+document.write("<br>Platform:"+navigator.platform);
+
+</script>
+</body>
+</html>

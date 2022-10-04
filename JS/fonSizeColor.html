@@ -1,0 +1,28 @@
+<html>
+<body>
+  <div id="d1">Pratiksha</div>
+  <input type="button" value="submit" onClick="func()">  
+</body> 
+
+<script> 
+ var size=new Array("50px","70px","100px","120px");
+ var i=0;
+ var color=new Array("red","yellow","pink","blue");
+ var j=0;
+ function func()
+ {
+    d1.style.fontSize=size[i];
+    i++;
+    if(size.length==i)
+    {
+        i=0;
+    }
+    d1.style.color=color[j];
+    j++;
+    if(color.length==j)
+    {
+        j=0;
+    }
+ }
+</script>
+</html>

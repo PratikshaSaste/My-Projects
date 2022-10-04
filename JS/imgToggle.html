@@ -1,0 +1,50 @@
+<html>
+    <body>
+        <img id=i1 height="200px" width="200px">
+        <input type="button" value="start" onclick="toggle()">
+        <input type="button" value="fast" onclick="fast()">
+        <input type="button" value="slow" onclick="slow()">
+        <input type="button" value="stop" onclick="stop()">
+    </body>
+    
+    <script>
+        var i=0;
+        function toggle()
+        {
+            //clearInterval(sI)
+            sI=window.setInterval("start()",300);
+
+        }
+
+        function start()
+        {
+            var img1=document.getElementById("i1");
+            var arrimg=new Array("logo.jpg","stock.jpg","maxresdefault.jpg","TCS.jpg");
+
+            i1.src=arrimg[i];
+            i++;
+
+            if(arrimg.length==i)
+           {
+               i=0;
+           }
+        }
+
+        function stop()
+        {
+            window.clearInterval(sI);
+        }
+        
+       function fast()
+       {
+           clearInterval(sI);
+        sI=window.setInterval("start()",100);
+       }
+
+       function slow()
+       {
+           clearInterval(sI)
+        sI=window.setInterval("start()",600);
+       }
+        </script>
+</html>
