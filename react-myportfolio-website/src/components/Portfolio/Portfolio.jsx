@@ -7,52 +7,6 @@ import IMG4 from '../../assets/portfolio4.jpg'
 import IMG5 from '../../assets/portfolio5.png'
 import IMG6 from '../../assets/portfolio6.jpg'
 
-
-const data = [
-  {
-     id: 1,
-     image:IMG1,
-     title: 'Crypto Currency Dashboard & Finantial Visualization',
-     github: 'https://github.com/PratikshaSaste/My-Projects',
-     demo: 'https://dribbble.com/Alien_pixels'
-  },
-  {
-     id: 2,
-     image:IMG2,
-     title: 'Charts templates & information in figma',
-     github: 'https://github.com/PratikshaSaste/My-Projects',
-     demo: 'https://dribbble.com/Alien_pixels'
-  },
-  {
-     id: 3,
-     image:IMG3,
-     title: 'Figma dashboard UI kit for data design web design',
-     github: 'https://github.com/PratikshaSaste/My-Projects',
-     demo: 'https://dribbble.com/Alien_pixels'
-  },
-  {
-     id: 4,
-     image:IMG4,
-     title: 'Maintaining tasks and tracking progress',
-     github: 'https://github.com/PratikshaSaste/My-Projects',
-     demo: 'https://dribbble.com/Alien_pixels'
-  },
-  {
-     id: 5,
-     image:IMG5,
-     title: 'Charts templates & infographics in Figma',
-     github: 'https://github.com/PratikshaSaste/My-Projects',
-     demo: 'https://dribbble.com/Alien_pixels'
-  },
-    {
-     id: 6,
-     image:IMG6,
-     title: 'Charts templates & infographics in Figma',
-     github: 'https://github.com/PratikshaSaste/My-Projects',
-     demo: 'https://dribbble.com/Alien_pixels'
-  }
-]
-
 const Portfolio = () => {
   return (
     <section id="portfolio">
@@ -60,22 +14,54 @@ const Portfolio = () => {
       <h2>Porttfolio</h2>
 
       <div className="container portfolio__container">
-        {
-        data.map(({id , image, title,github, demo}) => {
-        return(
-        <article key={id} className="portfolio__item">
+        <article className="portfolio__item">
           <div className="portfolio__item-image">
-              <img src={image} alt=""/>
+              <img src={IMG1} alt=""/>
             <h3> This is portfolio item</h3>
-            <div className="portfolio__item-cta">
-            <a href={github} className='btn' >Github</a>
-            <a href={demo} className='btn btn-primary' target='_blank'>Live demo</a>
-            </div>
+            <a href="https://github.com/PratikshaSaste/My-Projects" className='btn' >Github</a>
+            <a href="https://dribbble.com/Alien_pixels" className='btn btn-primary' target='_blank'>Live demo</a>
           </div>
         </article>
-        )
-        })
-      }
+        <article className="portfolio__item">
+          <div className="portfolio__item-image">
+              <img src={IMG2} alt=""/>
+            <h3> This is portfolio item</h3>
+            <a href="https://github.com/PratikshaSaste/My-Projects" className='btn' >Github</a>
+            <a href="https://dribbble.com/Alien_pixels" className='btn btn-primary' target='_blank'>Live demo</a>
+          </div>
+        </article>
+        <article className="portfolio__item">
+          <div className="portfolio__item-image">
+              <img src={IMG3} alt=""/>
+            <h3> This is portfolio item</h3>
+            <a href="https://github.com/PratikshaSaste/My-Projects" className='btn' >Github</a>
+            <a href="https://dribbble.com/Alien_pixels" className='btn btn-primary' target='_blank'>Live demo</a>
+          </div>
+        </article>
+        <article className="portfolio__item">
+          <div className="portfolio__item-image">
+              <img src={IMG4} alt=""/>
+            <h3> This is portfolio item</h3>
+            <a href="https://github.com/PratikshaSaste/My-Projects" className='btn' >Github</a>
+            <a href="https://dribbble.com/Alien_pixels" className='btn btn-primary' target='_blank'>Live demo</a>
+          </div>
+        </article>
+        <article className="portfolio__item">
+          <div className="portfolio__item-image">
+              <img src={IMG5} alt=""/>
+            <h3> This is portfolio item</h3>
+            <a href="https://github.com/PratikshaSaste/My-Projects" className='btn' >Github</a>
+            <a href="https://dribbble.com/Alien_pixels" className='btn btn-primary' target='_blank'>Live demo</a>
+          </div>
+        </article>
+        <article className="portfolio__item">
+          <div className="portfolio__item-image">
+              <img src={IMG6} alt=""/>
+            <h3> This is portfolio item</h3>
+            <a href="https://github.com/PratikshaSaste/My-Projects" className='btn' >Github</a>
+            <a href="https://dribbble.com/Alien_pixels" className='btn btn-primary' target='_blank'>Live demo</a>
+          </div>
+        </article>
       </div>
     </section>
   )
